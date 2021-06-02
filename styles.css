@@ -1,3 +1,9 @@
+body,
+html {
+  margin: 0;
+  height: 100vh;
+}
+
 body{
     background-color: #c4c4c4;
     display: flex;
@@ -5,10 +11,9 @@ body{
     align-items: center;
 }
 
-body,
-html {
-  margin: 0;
-  height: 100vh;
+hr{
+    border-color: #c4c4c4;
+    background-color: #c4c4c4;
 }
 
 .header{
@@ -29,7 +34,32 @@ html {
 
 .body_content{
     background-color: #ffffff;
-    width: 80vw;
+    width: 70vw;
     height: 80vh;
-    padding: 0 5px;
+    padding: 5px;
+}
+
+.about_me_container{
+    display: flex;
+    height: 30vh;
+}
+
+.about_me{
+}
+
+.interests_container{
+    display: flex;
+    height: 30vh;
+}
+
+.interests{
+}
+
+.contact{
+    height: 20vh;
+}
+
+.body_images{
+    height: 100%;
+    clip: rect(0, 80px, 80px, 0);
 }

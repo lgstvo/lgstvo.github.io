@@ -1,3 +1,17 @@
+function calcAge(birthday="2001-03-17") {
+    const today = new Date();
+    const birth = new Date(birthday);
+
+    let age = today.getFullYear() - birth.getFullYear(); 
+    const month = today.getMonth() - birth.getMonth();
+
+    if (month < 0 || (month === 0 && today.getDate() < birth.getDate())) {
+        age--;
+    }
+
+    return age;
+}
+
 const char = (i) => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     return Array.from({ length: i }, () => chars[Math.floor(Math.random() * chars.length)]).join(' ').toUpperCase();
@@ -13,7 +27,7 @@ const shuffle = async (line, nameLength, container) => {
     container.innerHTML = line;
 };
 
-const printBanner = async (name = "Luis Gustavo", version = "1.0.0", pos = "Cybersecurity Analyst", employer = "Pacific Sec") => {
+const printBanner = async (name = "Luis Gustavo", pos = "Cybersecurity Analyst", employer = "Pacific Sec") => {
     const bannerDiv = document.getElementById("banner");
     const bannerInfoDiv = document.getElementById("banner_info");
     const positionDiv = document.getElementById("pos");
@@ -56,7 +70,7 @@ const printBanner = async (name = "Luis Gustavo", version = "1.0.0", pos = "Cybe
     versionDiv.classList.add("banner_text");
 
     positionDiv.innerHTML = `${pos} @ <a href="https://site.pacificsec.com/", target="_blank">${employer}</a>`;
-    versionDiv.textContent = `Version: ${version}`;
+    versionDiv.textContent = `Version: 1.${calcAge()}.y.o`;
 
     bannerInfoDiv.style.display = "block";
     replayButton.style.display = "block";

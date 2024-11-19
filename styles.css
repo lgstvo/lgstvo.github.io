@@ -31,7 +31,15 @@ footer {
     justify-content: center;
     background-color: #000000;
     z-index: 10;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
+
+@media (max-width: 550px) {
+    footer {
+        display: none;
+    }
+  }
 
 #container{
     display: flex;

@@ -20,7 +20,7 @@ const char = (i) => {
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const shuffle = async (line, nameLength, container) => {
-    for (let x = 0; x < Math.random() * 4; x++) {
+    for (let x = 0; x < Math.random() * 10; x++) {
         container.textContent = char(nameLength);
         await sleep(100);
     }
